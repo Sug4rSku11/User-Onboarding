@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Form from './Form';
 import formSchema from './formSchema';
+import User from './User';
 import * as yup from 'yup';
 import './App.css';
 
@@ -78,9 +79,9 @@ function App() {
 
   return (
     <div className="container">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
         <h2>User Form</h2>
-      </header>
+      {/* </header> */}
       <Form 
       values={formValues}
       change={inputChange}
