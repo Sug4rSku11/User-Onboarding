@@ -6,7 +6,7 @@ describe('User Onboarding', () => {
     const emailInput = () => cy.get('input[name=email]');
     const passwordInput = () => cy.get('input[name=password]');
     const submitBtn = () => cy.get("button[id='submitBtn']");
-    const checkBox = () => cy.get(`checkbox[type="checkbox"]`);
+    const checkBox = () => cy.get(`[type="checkbox"]`);
 
     it('sanity check to make sure tests work', () => {
         //"it" is a test
@@ -60,7 +60,8 @@ describe('User Onboarding', () => {
             nameInput().type('Desiree');
             emailInput().type('desiree@gar.com');
             passwordInput().type('Desiree1!');
-            submitBtn().should('not.be.disabled');
+            submitBtn().should('not.be.disabled')
+            submitBtn().click()
         })
         
     })
